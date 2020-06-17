@@ -1,21 +1,42 @@
 \documentclass{article}
 \usepackage{ctex}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\newcommand{\tightlist}{
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}
+
+\title{春松客服项目申请书}
+\date{}
+\usepackage{listings}
+\lstset{
+    % backgroundcolor=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+    rulesepcolor= \color{gray}, %代码块边框颜色
+    breaklines=true,  %代码过长则换行
+    numbers=left, %行号在左侧显示
+    numberstyle= \small,%行号字体
+    keywordstyle= \color{blue},%关键字颜色
+    commentstyle=\color{gray}, %注释颜色
+    frame=shadowbox%用方框框住代码块
+    }
+
+
 
 \begin{document}
-
-\hypertarget{ux6625ux677eux5ba2ux670dux9879ux76eeux7533ux8bf7ux4e66}{%
-\section{春松客服项目申请书}\label{ux6625ux677eux5ba2ux670dux9879ux76eeux7533ux8bf7ux4e66}}
-
+\maketitle
 \hypertarget{ux9879ux76eeux540dux79f0}{%
-\subsection{项目名称}\label{ux9879ux76eeux540dux79f0}}
+\section{项目名称}\label{ux9879ux76eeux540dux79f0}}
 
-项目二：项目二：春松客服的接口开发
+项目二：春松客服的接口开发
 
 \hypertarget{ux9879ux76eeux8be6ux7ec6ux65b9ux6cd5}{%
-\subsection{项目详细方法}\label{ux9879ux76eeux8be6ux7ec6ux65b9ux6cd5}}
+\section{项目详细方法}\label{ux9879ux76eeux8be6ux7ec6ux65b9ux6cd5}}
 
 \hypertarget{ux8f6fux4ef6ux4f9dux8d56}{%
-\subsubsection{1.软件依赖}\label{ux8f6fux4ef6ux4f9dux8d56}}
+\subsection{软件依赖}\label{ux8f6fux4ef6ux4f9dux8d56}}
 
 \begin{enumerate}
 \item
@@ -37,6 +58,7 @@
   \toprule
   \endhead
   命令 & 含义\tabularnewline
+  \hline
   sudo groupadd docker & 为Docker创建group\tabularnewline
   sudo usermod -aG docker \$USER &
   将登录者加入到Docker的group里\tabularnewline
@@ -58,6 +80,7 @@
   \toprule
   \endhead
   命令 & 含义\tabularnewline
+  \hline
   sudo apt-get update & 更新\tabularnewline
   sudo apt-get install wget git curl vim -y &
   安装一些常用工具\tabularnewline
@@ -78,9 +101,10 @@
     \toprule
     \endhead
     名称 & 值\tabularnewline
-    export JAVA\textsubscript{HOME} &
+    \hline
+    export JAVA HOME &
     /usr/lib/jvm/java-1.8.0-amazon-corretto\tabularnewline
-    export PATH & \$PATH:\$JAVA\textsubscript{HOME}/bin\tabularnewline
+    export PATH & \$PATH:\$JAVA HOME/bin\tabularnewline
     \bottomrule
     \end{longtable}
   \end{enumerate}
@@ -98,7 +122,7 @@
 \end{enumerate}
 
 \hypertarget{ux6e90ux7801ux6784ux5efa}{%
-\subsubsection{2.源码构建}\label{ux6e90ux7801ux6784ux5efa}}
+\subsection{源码构建}\label{ux6e90ux7801ux6784ux5efa}}
 
 \begin{enumerate}
 \item
@@ -117,8 +141,16 @@
 \item
   下载源码
 
-  使用Git Clone git clone \url{https://github.com/chatopera/cosin.git}
-  或者 git clone git@github.com:chatopera/cosin.git
+  使用Git
+\begin{lstlisting}[language={bash}]
+  Clone git clone \url{https://github.com/chatopera/cosin.git}
+\end{lstlisting}
+
+或者
+\begin{lstlisting}[language={bash}]
+git clone git@github.com:chatopera/cosin.git
+\end{lstlisting}
+
 \item
   文件目录
 
@@ -127,18 +159,21 @@
   文件 & 含义\tabularnewline
   \midrule
   \endhead
-  \textasciitilde{}/cosin & 根目录\tabularnewline
-  \textasciitilde{}/cosin/contact-center & 核心的java应用\tabularnewline
-  \textasciitilde{}/cosin/contact-center/app & java和前端\tabularnewline
-  \textasciitilde{}/cosin/public/plugins & 开源版本的插件\tabularnewline
-  \textasciitilde{}/cosin/public/plugins/chatbot &
+   /cosin & 根目录\tabularnewline
+   /cosin/contact-center & 核心的java应用\tabularnewline
+   /cosin/contact-center/app & java和前端\tabularnewline
+   /cosin/public/plugins & 开源版本的插件\tabularnewline
+   /cosin/public/plugins/chatbot &
   机器人客服插件\tabularnewline
   \bottomrule
   \end{longtable}
 \item
   安装机器人客服插件
+\begin{lstlisting}[language={bash}]
+  cd  /cosin
+  ./public/plugins/chatbot/scripts/install.sh
+\end{lstlisting}
 
-  cd \textasciitilde{}/cosin ./public/plugins/chatbot/scripts/install.sh
   注意：如果是windows系统的话，需要使用Git
   Bash等Windows下的命令行工具来运行安装脚本
 \item
@@ -147,82 +182,57 @@
   \begin{enumerate}
   \item
     生成J2EE应用包
+\begin{lstlisting}[language={bash}]
+    cd  /cosin/contact-center ./admin/package.sh
+\end{lstlisting}
 
-    cd \textasciitilde{}/cosin/contact-center ./admin/package.sh
   \item
     执行完之后查看是否生成
-
+\begin{lstlisting}[language={bash}]
     ls ./app/target/*.war
+\end{lstlisting}
+
   \item
     生成Docker镜像
 
     \begin{enumerate}
     \tightlist
+  \item
+    \begin{lstlisting}[language={bash}]
+            cd  /cosin/contact-center
+\end{lstlisting}
+
+\item
+  \begin{lstlisting}[language={bash}]
+PACKAGEVERSION='git rev-parse --short HEAD'
+\end{lstlisting}
+
     \item
-      cd \textasciitilde{}/cosin/contact-center
-    \item
-      PACKAGE\textsubscript{VERSION}='git rev-parse --short HEAD' \#
-      当前源码版本
-    \item
-      docker build --build-arg
-      VCS\textsubscript{REF}=\$PACKAGE\textsubscript{VERSION}
-      \textbackslash{} --build-arg
-      APPLICATION\textsubscript{BUILDDATESTR}=`date
-      "+\%Y\%m\%d.\%H\%M\%S"` \textbackslash{} --build-arg
-      APPLICATION\textsubscript{CUSTOMERENTITY}=OSC \textbackslash{}
-      --no-cache \textbackslash{} --force-rm=true --tag
-      chatopera/contact-center:\$PACKAGE\textsubscript{VERSION} .
+      docker build
     \end{enumerate}
   \end{enumerate}
 \item
   成功之后会看到
-
   build成功
 \item
   发布镜像
 
-  发布到DockerHub docker push chatopera/contact-center:295dc27
-  //chatopera可以换成自己需要的名字 本地保存和加载 保存：docker save
-  chatopera/contact-center:295dc27 \textgreater{} IMAGE.tgz 加载：docker
-  load \textless{} IMAGE.tgz
 \end{enumerate}
 
 \hypertarget{ux914dux7f6eux53caux8fd0ux884c}{%
-\subsubsection{3.配置及运行}\label{ux914dux7f6eux53caux8fd0ux884c}}
+\subsection{配置及运行}\label{ux914dux7f6eux53caux8fd0ux884c}}
 
-\begin{enumerate}
-\item
-  春松客服的容器编排
 
-  vim docker-compose.yml ：描述文件，需要把此文件中services
-  标签下的contact-center服务中的image改成自己的镜像名称或ID vim .env
-  ：此文件需要与docker-compose.yml在同级目录下，此文件中设置的环境变量会覆盖docker-compose.yml中的环境变量
-  启动服务
-
-  docker-compose up --d contact-center //运行 docker-compose logs --f
-  contact-center //查看日志 docker-compose ps //查看各个容器状态
-  停止服务
-
-  docker-compose down //停止
-
-  \begin{enumerate}
-  \tightlist
-  \item
-    cd
-  \item
-    服务访问
-  \end{enumerate}
 
   在项目启动完成之后，使用浏览器访问 \url{http://localhost:8035}
-  （CC\textsubscript{WEBPORT没有变更的情况下默认为} 8035）
+  （CC WEBPORT没有变更的情况下默认为 8035）
   默认管理员账号： admin 密码： admin1234
-\end{enumerate}
 
 \hypertarget{ux9879ux76eeux5f00ux53d1ux65f6ux95f4ux8ba1ux5212}{%
-\subsection{项目开发时间计划}\label{ux9879ux76eeux5f00ux53d1ux65f6ux95f4ux8ba1ux5212}}
+\section{项目开发时间计划}\label{ux9879ux76eeux5f00ux53d1ux65f6ux95f4ux8ba1ux5212}}
 
 \hypertarget{ux6708}{%
-\subsubsection{7月}\label{ux6708}}
+\subsection{7月}\label{ux6708}}
 
 \begin{enumerate}
 \item
@@ -248,12 +258,11 @@
 \end{enumerate}
 
 \hypertarget{section-6}{%
-\subsubsection{8.1-8.31}\label{section-6}}
+\subsection{8.1-8.31}\label{section-6}}
 
 开发RESTfulAPI
 
 \hypertarget{section-7}{%
-\subsubsection{9.1-9.30}\label{section-7}}
-
+\subsection{9.1-9.30}\label{section-7}}
 整理代码和修改bug，等待提交
 \end{document}
