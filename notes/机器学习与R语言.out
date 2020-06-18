@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{推荐序}{}% 1
+\BOOKMARK [1][-]{section.2}{翻译序}{}% 2
+\BOOKMARK [1][-]{section.3}{第一章　机器学习简介}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{机器学习的起源}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{机器学习的使用和滥用}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{机器如何学习}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.3.1}{抽象化与知识表达}{subsection.3.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.3.2}{一般化}{subsection.3.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.3.3}{评估学习的成功性}{subsection.3.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.3.4}{1.4 将机器学习应用于数据中的步骤}{subsection.3.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.3.5}{1.5 选择机器学习算法}{subsection.3.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{1.6 使用R进行机器学习}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.5}{总结}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{第2章 数据的管理和理解}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{2.1 R数据结构}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{2.2 向量}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.3}{2.3 因子}{section.4}% 17
+\BOOKMARK [3][-]{subsubsection.4.3.1}{列表}{subsection.4.3}% 18
+\BOOKMARK [3][-]{subsubsection.4.3.2}{2.3.2 数据框}{subsection.4.3}% 19
+\BOOKMARK [3][-]{subsubsection.4.3.3}{2.3.3 矩阵和数组}{subsection.4.3}% 20
+\BOOKMARK [2][-]{subsection.4.4}{2.4 用R管理数据}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.4.1}{2.4.1 保存和加载R数据结构}{subsection.4.4}% 22
+\BOOKMARK [3][-]{subsubsection.4.4.2}{2.4.2 用CSV文件导入和保存数据}{subsection.4.4}% 23
+\BOOKMARK [3][-]{subsubsection.4.4.3}{2.4.3 从SQL数据库导入数据}{subsection.4.4}% 24

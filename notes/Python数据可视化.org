@@ -1,0 +1,12 @@
+* Python数据可视化
+** 散点图
+在Python体系中，可使用Scipy、Statsmodels或Sklearn等对离散点进行回归分析，归纳现有数据并进行预测分析。
+#+BEGIN_SRC python
+x=[1,2,3,4,5]
+y=[6,7,2,4,5]
+p=figure(plot_width=400,plot_height=400)
+p.scatter(x,y,
+size=20,
+radius=1,
+maker="circle",color="navy",alpha=0.5)
+#+END_SRC

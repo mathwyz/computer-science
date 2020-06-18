@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}推荐序}{1}{section.1}
+\contentsline {section}{\numberline {2}翻译序}{1}{section.2}
+\contentsline {section}{\numberline {3}第一章　机器学习简介}{1}{section.3}
+\contentsline {subsection}{\numberline {3.1}机器学习的起源}{1}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}机器学习的使用和滥用}{1}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}机器如何学习}{1}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}抽象化与知识表达}{1}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}一般化}{1}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}评估学习的成功性}{1}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}1.4 将机器学习应用于数据中的步骤}{1}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.5}1.5 选择机器学习算法}{1}{subsubsection.3.3.5}
+\contentsline {subsection}{\numberline {3.4}1.6 使用R进行机器学习}{2}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}总结}{2}{subsection.3.5}
+\contentsline {section}{\numberline {4}第2章 数据的管理和理解}{2}{section.4}
+\contentsline {subsection}{\numberline {4.1}2.1 R数据结构}{2}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}2.2 向量}{2}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}2.3 因子}{3}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}列表}{3}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}2.3.2 数据框}{3}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}2.3.3 矩阵和数组}{4}{subsubsection.4.3.3}
+\contentsline {subsection}{\numberline {4.4}2.4 用R管理数据}{4}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}2.4.1 保存和加载R数据结构}{4}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}2.4.2 用CSV文件导入和保存数据}{5}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.3}2.4.3 从SQL数据库导入数据}{5}{subsubsection.4.4.3}

@@ -1,0 +1,246 @@
+% Created 2020-04-14 Tue 19:26
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{WYZ}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={WYZ},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{推荐序}
+\label{sec:org90ede09}
+\section{翻译序}
+\label{sec:org3a5acff}
+本书共分12章。第1章介绍机器学习的基本概念和理论，并介绍用于机器学习的R软件环境的准备。第2章介绍如何应用R来管理数据，进行数据的探索分析和数据可视化。第3章到第9章介绍典型的机器学习算法和案例，包括：k近邻分类算法、朴素贝叶斯算法、决策树和规则树、回归预测、黑盒算法——神经网络和支持向量机、关联分析、k均值聚类。伴随着这些算法的介绍，书中给出了大量的实际案例，并给出了详细的分析步骤，例如乳腺癌的判断、垃圾短信的过滤、贷款违约的预测、毒蘑菇的判别、医疗费用的预测、建筑用混凝土强度的预测、光学字符的识别、超市购物篮关联分析以及市场细分等。第10章介绍模型性能评价的原理和方法。第11章给出提高模型性能的几种常用方法。第12章讨论用R进行机器学习时可能遇到的一些高级专题，例如特殊形式的数据、大数据集的处理、并行计算和CPU计算等技术。
+\section{第一章　机器学习简介}
+\label{sec:org0e810cf}
+\subsection{机器学习的起源}
+\label{sec:org574ca4f}
+机器学习的研究领域是发明计算机算法，把数据转化为智能行为．
+
+机器学习的一个紧密相关的学科是数据挖掘，它涉及从大型的数据库中产生新的洞察（不要把它和“挖掘数据”相混淆，“挖掘数据”是指挑选最合适的数据来支持某个理论的行为）。
+\subsection{机器学习的使用和滥用}
+\label{sec:orgb4c9a85}
+\subsection{机器如何学习}
+\label{sec:orgf85477f}
+一个经常被引用的机器学习的正式定义是由计算机科学家Tom M.Mitchell提出的：如果机器能够获取经验并且能利用它们，在以后的类似经验中能够提高它的表现，该机器就称为机器学习。
+数据　抽象化　一般化
+\subsubsection{抽象化与知识表达}
+\label{sec:org8b96a37}
+
+用一个特定的模型来拟合数据集的过程称为训练。为什么不把它称为学习呢？第一，要牢记学习的过程不会因为数据抽象化过程的结束而终止。学习还要求更进一步的步骤，即把知识一般化从而被未来数据所用。第二，“训练”这个词更精确地描绘了模型被应用于数据的实际过程。学习是一种自下而上的归纳性推理。训练更好地表现了机器学习模型是由人类教师强加于机器学生身上的这个事实，为计算机以后想要建立的模型提供了一个体系结构。
+\subsubsection{一般化}
+\label{sec:orgd8e0fae}
+一般化这个术语描述了把抽象化的知识转换成可以用于行动的形式。
+\subsubsection{评估学习的成功性}
+\label{sec:orgb6edc94}
+试图用模型拟合噪声就是称之为过度拟合问题的基础。
+\subsubsection{1.4 将机器学习应用于数据中的步骤}
+\label{sec:org08feb26}
+\subsubsection{1.5 选择机器学习算法}
+\label{sec:org336bae2}
+机器学习算法可以分为两类：用来建立预测模型的有监督学习算法和用来建立描述模型的无监督学习算法。使用哪种类型的算法取决于你需要完成的学习任务。
+监督并不是指需要人为干预，它是指让目标值担任监督的角色，让它告诉学习者要学习的任务是什么。
+具体来说，给一组数据，学习算法尝试最优化一个函数（模型）来找出属性值之间的组合方式，最终据此给出目标值。
+描述性模型，通过新而有趣的方式总结数据并获得洞察，从而学习任务从这些洞察中受益。与需要预测目标值的预测模型不同，在描述性模型里，没有某一个属性比其他属性更重要。事实上，因为没有一个要学习的目标，所以训练描述性模型的过程称为无监督学习。
+\begin{enumerate}
+\item 有监督学习算法
+\label{sec:org7409d27}
+\begin{enumerate}
+\item 最近邻 　分类
+\label{sec:org6af1609}
+\item 朴素贝叶斯　分类
+\label{sec:orgae82239}
+\item 决策树　分类
+\label{sec:org04fa8a7}
+\item 分类器　分类
+\label{sec:orgca1a959}
+\item 线性回归　数值预测
+\label{sec:orgbc12c34}
+\item 回归树　数值预测
+\label{sec:orgc39a2e6}
+\item 模型树　数值预测
+\label{sec:org0088ea4}
+\item 神经网络　双重用处
+\label{sec:org39f9767}
+\item 支持向量机　双重用处
+\label{sec:org9598858}
+\end{enumerate}
+\item 无监督学习算法
+\label{sec:org50bb53b}
+\begin{enumerate}
+\item 关联规则 模式识别
+\label{sec:org0e32641}
+\item k　均值聚类　聚类
+\label{sec:org29789e4}
+\end{enumerate}
+\end{enumerate}
+\subsection{1.6 使用R进行机器学习}
+\label{sec:org254bc4c}
+\url{http://cran.r-project.org/web/views/MachineLearning.html}。
+\begin{verbatim}
+install.packages("RWeka")
+install.packages("RWeka",lib="path/to/library")
+?install.packages
+\end{verbatim}
+library这个函数名使得它容易与package相互搞混。可是，准确来说，library指的是安装添加包的位置，而不是添加包本身
+\subsection{总结}
+\label{sec:org6a3ad55}
+机器学习起源于统计学、数据库科学和计算机科学的交互。它是一个强大的工具，能够在大量的数据中找到可行动的洞察。然而，人们仍需持谨慎的态度，避免现实生活中机器学习的普遍滥用。
+\section{第2章 数据的管理和理解}
+\label{sec:org43cf50b}
+\subsection{2.1 R数据结构}
+\label{sec:org78ddd4d}
+在机器学习中经常使用的R数据结构是：向量、因子、列表、数组和数据框。
+\subsection{2.2 向量}
+\label{sec:org1180a76}
+\begin{verbatim}
+subject_name<-c("John Doe","Jane Doe","Steve Graves")
+temperature<-c(98.1,98.6,101.4)
+flu_statusM<-c(FALSE,FALSE,TRUE)
+\end{verbatim}
+因为R中的向量有固有的顺序，所以其数据能通过计算向量中各元素的序号来访问，序号是从1开始算起的，并且在向量名字的后面用方括号括起这个序号（例如，[和]）。
+\begin{verbatim}
+temperature[2]
+temperature[2:3]
+temperature[-2]
+temperature[c(TRUE,TRUE,FALSE)]
+\end{verbatim}
+\subsection{2.3 因子}
+\label{sec:org84b0c08}
+尽管可以用一个字符型向量来存储名义属性数据，但R提供了称为因子（factor）的专用数据结构来表示这种属性数据。
+其实因子是向量的一个特例，它单独用来标识名义属性（或变量）。
+另外，一些机器学习算法是用特别的程序来处理分类变量的，把分类变量编码为因子可以确保模型能够合理地处理这类数据。
+要把字符型向量转换成因子，只需要应用factor（）函数。例如：
+\begin{verbatim}
+gender<-factor(c("MALE","FAMALE","MALE"))
+\end{verbatim}
+
+\begin{verbatim}
+blood<-factor(c("O","AB","A"),
+levels=c("A","B","AB","O"))
+blood
+\end{verbatim}
+\subsubsection{列表}
+\label{sec:org1ec475b}
+另一种特殊类型的向量——列表，它用来存储一组有序的值。然而，不像向量要求所有的元素都必须是同一种类型，列表允许收集不同类型的值。由于这个灵活性，列表一直用于存储不同类型的输入和输出数据，以及存储机器学习模型所使用的结构参数。
+\begin{verbatim}
+subject1<-list(fullnane=subject_name[1],
+temperature=temperature[1],
+flu_status=flu_status[1],
+gender=gender[1],
+blood=blood[1])
+subjec1
+\end{verbatim}
+
+\begin{verbatim}
+subjec1[2]
+subjec1$temperature
+subjec1[c("temperature","flu_status")]
+\end{verbatim}
+\subsubsection{2.3.2 数据框}
+\label{sec:org1f97fa6}
+\begin{verbatim}
+pt_data<-data.frame(subjec_name,
+temperature,flu_status,gender,blood,stringsASFactots=FALSE)
+pt_data
+pt_data$subject_name
+pt_data("temperature","flu_status")
+\end{verbatim}
+但是通过名字来列出所要求的列将会使R代码清晰、容易修改。
+\begin{verbatim}
+pt_data[1,2]
+pt_data[c(1,3),c(2,4)]
+pt_data[,1]
+pt_data[1,]
+pt_data[,]
+pt_data[c(1,3),c("temperature","gender")]
+pt_data[c(1,3),c(-1,-3,-5)]
+\end{verbatim}
+\subsubsection{2.3.3 矩阵和数组}
+\label{sec:org3344d29}
+\begin{verbatim}
+m<-matrix(c("a","b","c","d"),nrow=2)
+m
+\end{verbatim}
+\begin{verbatim}
+m<-matrix(c("a","b","c","d"),ncol=2)
+m
+\end{verbatim}
+你将会注意到R先加载矩阵的第一列，然后加载第二列。这称为按列顺序。为了进一步说明这个概念，观察当我们在矩阵中加入更多值以后会发生什么。
+
+\begin{verbatim}
+m<-matrix(c("a","b","c","d","e","f"),nrow=2)
+m
+\end{verbatim}
+\begin{verbatim}
+m<-matrix(c("a","b","c","d","e","f"),ncol=2)
+m
+\end{verbatim}
+\begin{verbatim}
+m[1,]
+m[,1]
+\end{verbatim}
+与矩阵结构非常接近的是数组（array），它是一个多维数据表。一个矩阵含有行和列值；一个数组包含行、列以及任意多层的值。尽管在后面的章节中我们偶尔会使用矩阵，但是数组的使用就超出了本书的学习范围。
+\subsection{2.4 用R管理数据}
+\label{sec:orgfaa3e7c}
+\subsubsection{2.4.1 保存和加载R数据结构}
+\label{sec:org6f3fd94}
+\begin{verbatim}
+save(x,y,z,file="mydata.RData")
+load("mydata.RDdata")
+\end{verbatim}
+如果你需要立即结束当前的R会话，save.image（）命令将会把你所有的会话写入一个叫做.RData的文件里。默认情况下，R将会在下次启动时寻找这个文件，上次R结束时的R会话将会重现，就像你最后离开R时一样。
+\subsubsection{2.4.2 用CSV文件导入和保存数据}
+\label{sec:org7728727}
+由于Microsoft Excel类的电子表格数据操作容易便捷，所以文本格式文件也能从此类程序中导入或者导出。
+最常用的表格文本文件格式可能是逗号分隔值（Comma-Separated Value，CSV）文件。
+
+\begin{verbatim}
+pt_data<-read.csv("pt_data.csv",stringsASFactots=FALSE)
+mydata<-read.csv("mydata.csv",stringsASFactots=FALSE,header=FALSE)
+\end{verbatim}
+read.csv（）函数是read.table（）函数的一个特例。read.table（）函数能读取具有多种不同格式的表格数据，包括其他的分隔形式，比如制表符分隔的值（Tab-SeparatedValue，TSV）。
+\begin{verbatim}
+write.csv(pt_data,file="pt_data.csv")
+\end{verbatim}
+\subsubsection{2.4.3 从SQL数据库导入数据}
+\label{sec:org4907458}
+如果数据存储在一个ODBC SQL（Open Database Connectivity，ODBC；Structured QueryLanguage，SQL）数据库中，比如Oracle、MySQL、PostgreSQL、Microsoft SQL或者SQLite。Brian Ripley创建的RODBC添加包可以把这类数据直接导入R数据框中。
+\begin{verbatim}
+install.packages("RODBC")
+library(RODBC)
+mydb<-odbcConnect("my_dsn")
+mydb<-odbcConnect("my_dsn",uid="my_username",
+pwd="my_password")
+\end{verbatim}
+sqlQuery（）函数使用典型的SQL查询语言，如下所示：
+\begin{verbatim}
+patient_query<-"select * from patient_data where alive=1"
+patient_data<-sqlQuery(channel=mydb,query=patient_query)
+\end{verbatim}
+\begin{verbatim}
+odbcCloses(mydb)
+\end{verbatim}
+\end{document}
