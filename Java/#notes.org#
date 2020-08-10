@@ -114,6 +114,7 @@ System.out.println(“No more bottles of beer on the wall”);
 #+BEGIN_SRC java
 public class PhraseOMatic {
 public static void main (String[] args) {
+
 / 你可以随意加上其他术语
 String[] wordListOne = {“24/7”,”mu-Tier”,”30,000 foot”,”B-to-B”,”win-win”,”front-
 end”, “web-based”,”pervasive”, “smart”sigma”,”critical-path”, “dynamic”};
@@ -125,7 +126,7 @@ String[] wordListTwo = {“empowered”, “sticky”,
 String[] wordListThree = {“process”, “tippipoint”, “solution”, “architecture”, “core competency”,
 “strategy”, “mindshare”, “portal”, “space”, “vision”,
 “paradigm”, “mission”};
-ࡻLjຕು৶೟փ໙๟ኈኟ‫ڦ‬ᆌᆩ‫ײ‬ႾLjස
+
 ࡕᄲߴ઻ӱੂ࢔Ԁ‫ײڦ‬ႾLjఫ৽ӝጆॆຍ
 Ԁ‫ײڦ‬ႾLjఫ৽ӝጆॆຍ
 ‫ײڦ‬ႾLjఫ৽ӝጆॆຍ

@@ -1,0 +1,21 @@
+* Java工具
+** ant
+运行如下代码可以在电脑上安装ant
+#+BEGIN_SRC bash
+sudo apt-get install ant
+#+END_SRC
+
+验证是否安装成功
+
+#+BEGIN_SRC bash
+ant -version
+#+END_SRC
+
+** maven
+#+BEGIN_SRC bash
+sudo apt-get install maven
+#+END_SRC
+
+#+BEGIN_SRC xml
+maven -version
+#+END_SRC
